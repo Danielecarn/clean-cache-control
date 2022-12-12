@@ -1,33 +1,26 @@
 # BDD Specs
 
-## Narrativa 1
+Feature: Cliente Online
 
-```
 Como um cliente online 
 Quero que o sistema me mostre minhas compras
 Para que eu possa controlar minhas despesas
-```
 
-### Cenários
+Scenario:  Obter dados da API
 
-```
 Dado que o cliente tem conexão com a internet
 Quando o cliente solicitar para carregar suas compras
 Então o sistema deve exibir suas compras vindo de uma API
 E subistituir os dados do cache com os dados mais atuais
-```
 
-## Narrativa 2
+Feature: Cliente Offiline
 
-```
 Como um cliente offline
 Quero que o sistema me mostre minhas últimas compras gravdas 
 Para eu poder ver minhas despesas mesmo sem ter internet
-```
 
-### Cenários
+Scenario: Obter dados do Cache
 
-```
 Dado que o cliente não tem conexão com a internet
 E existia algum dado gravado no cache
 E os dados do cache forem mais novos que 3 dias
@@ -44,4 +37,3 @@ Dado que o cliente não tem conexão com a internet
 E o cache esteja vazio
 Quando o cliente solicitar para carregar suas compras
 Então o sistema deve exibir uma mensagem de erro
-```
